@@ -1,9 +1,12 @@
 [submodule "RPThreadTrackerV3.FrontEnd"]
 	path = RPThreadTrackerV3.FrontEnd
 	url = git@github.com-blackjackkent:blackjackkent/RPThreadTrackerV3.FrontEnd
+	branch = development
 [submodule "RPThreadTrackerV3.BackEnd"]
 	path = RPThreadTrackerV3.BackEnd
 	url = git@github.com-blackjackkent:blackjackkent/RPThreadTrackerV3.BackEnd
+	branch = development
 [submodule "RPThreadTracker.BackEnd.TumblrClient"]
 	path = RPThreadTracker.BackEnd.TumblrClient
 	url = git@github.com-blackjackkent:blackjackkent/RPThreadTracker.BackEnd.TumblrClient
+	branch = development
