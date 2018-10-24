@@ -1,0 +1,13 @@
+RPThreadTrackerV3.FrontEnd/node_modules
+RPThreadTrackerV3.FrontEnd/npm-debug.log
+.docker/*.dockerfile
+docker-compose*
+.dockerignore
+RPThreadTrackerV3.FrontEnd/.git
+RPThreadTrackerV3.FrontEnd/.gitignore
+.env
+*/bin
+*/obj
+README.md
+LICENSE
+RPThreadTrackerV3.FrontEnd/.vscode

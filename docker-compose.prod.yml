@@ -1,0 +1,13 @@
+version: '2'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./.docker/frontend.prod.dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - rpthreadtracker-network
+networks:
+  rpthreadtracker-network:
+    driver: bridge

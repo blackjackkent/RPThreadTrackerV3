@@ -2,25 +2,27 @@ version: '2'
 services:
   frontend:
     build:
-      context: ./RPThreadTrackerV3.FrontEnd
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./.docker/frontend.dev.dockerfile
     ports:
       - "8080:8080"
-    networks:
-      - rpthreadtracker-
-  backend:
-    build:
-      context: ./RPThreadTrackerV3.BackEnd
-      dockerfile: 
-  sqldb:
-    image: "microsoft/mssql-server-linux"
-    environment:
-      SA_PASSWORD: "Your_password123"
-      ACCEPT_EULA: "Y"
     volumes:
-      - ./RPThreadTrackerV3.BackEnd/SQL:/scripts
+      - ./RPThreadTrackerV3.FrontEnd:/usr/src/app
     networks:
       - rpthreadtracker-network
+  # backend:
+  #   build:
+  #     context: ./RPThreadTrackerV3.BackEnd
+  #     dockerfile: 
+  # sqldb:
+  #   image: "microsoft/mssql-server-linux"
+  #   environment:
+  #     SA_PASSWORD: "Your_password123"
+  #     ACCEPT_EULA: "Y"
+  #   volumes:
+  #     - ./RPThreadTrackerV3.BackEnd/SQL:/scripts
+  #   networks:
+  #     - rpthreadtracker-network
 networks:
   rpthreadtracker-network:
     driver: bridge
