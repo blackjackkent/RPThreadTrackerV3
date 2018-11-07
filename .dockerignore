@@ -8,6 +8,7 @@ RPThreadTrackerV3.FrontEnd/.gitignore
 .env
 */bin
 */obj
+*/.vs
 README.md
 LICENSE
 RPThreadTrackerV3.FrontEnd/.vscode

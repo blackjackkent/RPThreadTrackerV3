@@ -8,6 +8,14 @@ services:
       - "80:80"
     networks:
       - rpthreadtracker-network
+  backend:
+    build:
+      context: .
+      dockerfile: ./.docker/backend.prod.dockerfile
+    ports:
+      - "29564:80"
+    networks:
+      - rpthreadtracker-network
 networks:
   rpthreadtracker-network:
     driver: bridge
