@@ -17,7 +17,7 @@ services:
     ports:
       - "29564:80"
     volumes:
-      - ./RPThreadTrackerV3.FrontEnd:/usr/src/app
+      - ./RPThreadTrackerV3.BackEnd:/app
     networks:
       - rpthreadtracker-network
   # sqldb:

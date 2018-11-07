@@ -12,3 +12,5 @@ RPThreadTrackerV3.FrontEnd/.gitignore
 README.md
 LICENSE
 RPThreadTrackerV3.FrontEnd/.vscode
+RPThreadTrackerV3.BackEnd/RPThreadTrackerV3.BackEnd/bin
+RPThreadTrackerV3.BackEnd/RPThreadTrackerV3.BackEnd/obj
