@@ -16,6 +16,12 @@ services:
       - "29564:80"
     networks:
       - rpthreadtracker-network
+  sqldb:
+    build:
+      context: .
+      dockerfile: ./.docker/sqldb.dockerfile
+    networks:
+      - rpthreadtracker-network
 networks:
   rpthreadtracker-network:
     driver: bridge
