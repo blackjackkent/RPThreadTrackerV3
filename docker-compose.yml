@@ -20,15 +20,15 @@ services:
       - ./RPThreadTrackerV3.BackEnd:/app
     networks:
       - rpthreadtracker-network
-  # sqldb:
-  #   image: "microsoft/mssql-server-linux"
-  #   environment:
-  #     SA_PASSWORD: "Your_password123"
-  #     ACCEPT_EULA: "Y"
-  #   volumes:
-  #     - ./RPThreadTrackerV3.BackEnd/SQL:/scripts
-  #   networks:
-  #     - rpthreadtracker-network
+  sqldb:
+    build:
+      context: .
+      dockerfile: ./.docker/sqldb.dev.dockerfile
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
+    networks:
+      - rpthreadtracker-network
 networks:
   rpthreadtracker-network:
     driver: bridge
