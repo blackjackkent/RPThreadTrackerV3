@@ -1,4 +1,4 @@
-version: '2'
+version: '2.4'
 services:
   frontend:
     build:
@@ -20,6 +20,16 @@ services:
       - ./RPThreadTrackerV3.BackEnd:/app
     networks:
       - rpthreadtracker-network
+  tumblrclient:
+    build:
+      context: .
+      dockerfile: ./.docker/tumblrclient.dev.dockerfile
+    ports:
+      - "58075:80"
+    volumes:
+      - ./RPThreadTracker.BackEnd.TumblrClient:/app
+    networks:
+      - rpthreadtracker-network
   sqldb:
     build:
       context: .
@@ -30,4 +40,4 @@ services:
       - rpthreadtracker-network
 networks:
   rpthreadtracker-network:
-    driver: bridge
+    name: "rpthreadtracker-network"
