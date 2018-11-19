@@ -3,7 +3,7 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: ./.docker/frontend.dev.dockerfile
+      dockerfile: ./.docker/frontend.test.dockerfile
     ports:
       - "8080:8080"
     volumes:
@@ -13,7 +13,7 @@ services:
   backend:
     build:
       context: .
-      dockerfile: ./.docker/backend.dev.dockerfile
+      dockerfile: ./.docker/backend.test.dockerfile
     ports:
       - "29564:80"
     volumes:
@@ -23,25 +23,11 @@ services:
   tumblrclient:
     build:
       context: .
-      dockerfile: ./.docker/tumblrclient.dev.dockerfile
+      dockerfile: ./.docker/tumblrclient.test.dockerfile
     ports:
       - "58075:80"
     volumes:
       - ./RPThreadTracker.BackEnd.TumblrClient:/app
-    networks:
-      - rpthreadtracker-network
-  sqldb:
-    build:
-      context: .
-      dockerfile: ./.docker/sqldb.dockerfile
-    ports:
-      - "1433:1433"
-    networks:
-      - rpthreadtracker-network
-  mongodb:
-    image: mongo
-    ports:
-      - "27017:27017"
     networks:
       - rpthreadtracker-network
 networks:

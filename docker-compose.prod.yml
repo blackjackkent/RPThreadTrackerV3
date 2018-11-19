@@ -16,6 +16,14 @@ services:
       - "29564:80"
     networks:
       - rpthreadtracker-network
+  tumblrclient:
+    build:
+      context: .
+      dockerfile: ./.docker/tumblrclient.prod.dockerfile
+    ports:
+      - "58075:80"
+    networks:
+      - rpthreadtracker-network
   sqldb:
     build:
       context: .

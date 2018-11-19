@@ -6,11 +6,8 @@ docker-compose*
 RPThreadTrackerV3.FrontEnd/.git
 RPThreadTrackerV3.FrontEnd/.gitignore
 .env
-*/bin
-*/obj
-*/.vs
+RPThreadTrackerV3.BackEnd/.vs/
+RPThreadTracker.BackEnd.TumblrClient/.vs/
 README.md
 LICENSE
 RPThreadTrackerV3.FrontEnd/.vscode
-RPThreadTrackerV3.BackEnd/RPThreadTrackerV3.BackEnd/bin
-RPThreadTrackerV3.BackEnd/RPThreadTrackerV3.BackEnd/obj
